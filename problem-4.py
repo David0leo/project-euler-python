@@ -62,18 +62,19 @@ def main():
             for k in range(j, 100):
                 num2 =  sup - 100*i - k
                 #check if product is palindrome
-                #exit function and return true for
+                #and if it is largest
                 if (check_palindrome(num1*num2)) and (num1*num2 > largest_pal):
                     largest_pair[0] = num1
                     largest_pair[1] = num2
                     largest_pal = num1*num2
-        #gone through 100*100 nums, check if found a palindrome
-        #return largest if one was found
+        #gone through block of nums, check if one found
+        #return largest if more than one was found
         if largest_pal != 0:
             print(largest_pair[0], "*", largest_pair[1], "=", largest_pal)
             print("Is the largest palindrome, which is the sum of two 3 digit nums.")
             return
-          
+    
+    # if we went through all those nums and didn't find a palindrome      
     if largest_pal == 0:
         print("No palindrome found as product of two 3 digit numbers")
     return
