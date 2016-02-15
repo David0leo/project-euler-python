@@ -58,5 +58,5 @@ def main():
     print(gen_primal_py_triples(300))
     return
 
-#for testing
+#for testings
 main()
